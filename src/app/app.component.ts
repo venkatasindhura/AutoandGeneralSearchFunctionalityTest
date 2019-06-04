@@ -12,9 +12,6 @@ import { HighlightTag } from 'angular-text-input-highlight';
 export class AppComponent implements OnInit {
    articlesCollection: any[];
    searchText: any;
-   
-
-
   config = {
     itemsPerPage: 5,
     currentPage: 1,
