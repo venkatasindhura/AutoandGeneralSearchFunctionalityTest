@@ -5,7 +5,7 @@
         placeholder="Start searching for a article by title and dates " (click)=" get_articles()">
     </div>
   </div>
-  <table class="mainTable">
+  <table class="articlesTable">
     <tbody>
       <tr *ngFor="let article of articlesCollection | filter:searchText | paginate: config">
         <td>{{article.created_at}}</td>

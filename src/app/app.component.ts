@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
   }
 
   get_articles() {
-    this.searchqueryapi.getArticles()
+    this.searchqueryapi.get_API_Articles()
     .subscribe
     (
       data => {

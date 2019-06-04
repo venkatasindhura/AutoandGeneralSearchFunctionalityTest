@@ -6,7 +6,7 @@ import {Observable} from 'rxjs';
 })
 export class SearchqueryapiService {
   constructor(private httpclient: HttpClient){}
-  getArticles(): Observable<any> {
+  get_API_Articles(): Observable<any> {
    return this.httpclient.get('http://hn.algolia.com/api/v1/search?query=foo&tags=story');
   }
 }
