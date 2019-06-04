@@ -1,0 +1,124 @@
+/* You can add global styles to this file, and also import other style files */
+ @import "~bootstrap/dist/css/bootstrap.css";
+$background-color :#563d7c;
+$width: 80%;
+$padding: 10px;
+$padding-col: 10px;
+$baseColor: #398B93;
+.searchBar {
+    background-color: $background-color;
+     padding: 15px;;
+     width: $width;
+     margin-top:15px;
+  }
+  .paginator{
+    background-color: $background-color;
+    width: $width;
+    text-align: center;
+    padding: $padding-col;
+  }
+
+.mainTable {
+   max-width: calc(100% - 2em);
+   margin: 1em auto;
+   overflow: hidden;
+   width: 80%;
+}
+
+table {
+   width: 100%;
+   td { 
+      padding: $padding; 
+   }
+   td {
+      text-align: center;
+      vertical-align: middle;
+      
+      &:last-child {
+         font-size: 0.95em;
+         line-height: 1.4;
+         text-align: left;
+      }
+   }
+   
+   tr {     
+      &:nth-child(2n) { background-color: white; }
+   }
+}
+
+@media screen and (max-width: 700px) {   
+   table, tr, td { display: block; }
+   
+   td {
+      &:first-child {
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         
+      }
+
+      &:not(:first-child) {
+         clear: both;
+         padding: 4px 20px 4px 90px;
+         position: relative;
+         text-align: left;
+         &:before {
+            content: '';
+            display: block;
+            left: 0;
+            position: absolute;
+         }
+      }
+   }
+   tr {
+      padding: $padding 0;
+      position: relative;
+      &:first-child { display: none; }
+      border-bottom: lightblue;
+   }
+}
+
+@media screen and (max-width: 500px) {
+ td {
+      &:first-child { 
+         position: relative;   
+         top: 0;
+         transform: translateY(0);
+         width: 100%;
+      text-align: left;
+         
+      }
+      
+      &:not(:first-child) {
+         margin: 0;
+         padding: 5px 1em;
+         width: 100%;
+         
+         &:before {
+            font-size: .8em;
+            padding-top: 0.3em;
+            position: relative;
+         }
+      }
+      
+      &:last-child  { 
+          padding-bottom: 1rem !important; 
+        }
+   }
+   
+   tr {
+    &:nth-child(2n+1) { background-color: lighten($baseColor, 55%) }
+      background-color: white !important;
+      margin: 0.5rem 0;
+      padding: 0;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-size: 1.5rem;
+     font-weight: 500;
+     text-align: left;
+   }
+   .mainTable { 
+      border: none; 
+      box-shadow: none;
+      overflow: visible;
+   }
+}
